@@ -109,7 +109,9 @@ def a_star(start,goal,grid):
 
  def heuristic(a, b):
     """Manhattan mesafesini hesaplar (sezgisel fonksiyon)"""
-    return abs(a[0] - b[0]) + abs(a[1] - b[1])
+    def heuristic(istasyon_1: Istasyon,istasyon_2: Istasyonstasyon)-> int:
+    """Manhattan mesafesini hesaplar (sezgisel fonksiyon)"""
+    return abs((istasyon_1.idx[1:]) - int(istasyon_2.idx[1:]))
 
  def is_valid_cell(cell):
     """Hücrenin geçerli olup olmadığını kontrol eder"""
